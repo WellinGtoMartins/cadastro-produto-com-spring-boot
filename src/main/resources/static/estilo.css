@@ -1,0 +1,109 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body{
+
+    background-color: #CCDAF1;
+
+}
+
+
+.principal{
+
+    padding: 10px;
+
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: 200px;
+    grid-template-areas: ". a a ."    ". a a .";
+}
+
+.formulario {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    padding-bottom: 0px;
+    background-color: #7fa3dc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #4c7ece;
+    display: table;
+
+}
+
+.formulario-separa-campos{
+
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+.legenda{
+
+    float: left;
+    width: 100px;
+    display: block;
+    text-align: right;
+    margin-right: 5px;
+    padding-top: 3px;
+
+}
+
+.campo-de-texto{
+
+    float: left;
+    width: 300px;
+    padding: 5px;
+
+}
+
+.botao-envio{
+
+    float: left;
+    margin-left: 105px;
+    padding: 5px;
+
+}
+
+table.customTable {
+
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #7ea8f8;
+    border-style: solid;
+    color: #000000;
+
+}
+
+table.customTable td, table.customTable th {
+
+    border-width: 2px;
+    border-color: #7ea8f8;
+    border-style: solid;
+    padding: 5px;
+    text-align: center;
+
+}
+
+table.customTable thead {
+
+    background-color: #7ea8f8;
+
+}
+
+.imagem-thumbnail{
+
+    width: 150px;
+
+}

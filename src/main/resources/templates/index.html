@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+        <div class="principal">
+        <div class="wrapper">
+        <form  class="formulario" th:action="@{/cadastro}" th:object="${produto}" method="post" enctype="multipart/form-data">
+                <div class="formulario-separa-campos">
+                        <input type="file" name="file">
+                </div>
+
+                <div class="formulario-separa-campos">
+                        <label>Nome</label>
+                        <input type="text" th:field="*{nome}">
+                </div>
+
+                <div class="formulario-separa-campos">
+                        <label>Descrição</label>
+                        <input type="text" th:field="*{descricao}">
+                </div>
+
+                <div class="formulario-separa-campos">
+                        <img th:src="*{imagem}">
+                </div>
+
+                <div class="formulario-separa-campos">
+                        <input type="submit" value="Cadastrar produto">
+                </div>
+
+        </form>
+        </div>
+        <table class="customTable">
+                <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Imagem</th>
+                </tr>
+                <tr th:each="produto: ${produtos}">
+                        <td th:text="${produto.nome}"></td>
+                        <td th:text="${produto.descricao}"></td>
+                        <td><img class="imagem-thumbnail" th:src="${produto.imagem}"></td>
+                </tr>
+        </table>
+        </div>
+
+</body>
+</html>
